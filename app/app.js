@@ -16,6 +16,12 @@ var App = Ember.Application.extend(Ember.Evented, {
   podModulePrefix: config.podModulePrefix,
   Resolver: Resolver,
 
+  dependencies: {
+    services: [
+      'auth'
+    ]
+  },
+
   // Configure global logging based on debug feature flag
   LOG_TRANSITIONS: debuggingEnabled,
   LOG_TRANSITIONS_INTERNAL: debuggingEnabled,
