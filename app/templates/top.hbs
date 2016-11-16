@@ -85,6 +85,9 @@
             <li>
               {{#link-to "profile" class="signed-in" title="See the Travis accounts you belong to"}}Accounts{{/link-to}}
             </li>
+            <li>
+              {{#link-to "dashboard.repositories" class="signed-in" title="See the Travis Dashboard"}}Dashboard{{/link-to}}
+            </li>
             {{#if config.billingEndpoint}}
               {{#unless config.enterprise}}
                 <li>
