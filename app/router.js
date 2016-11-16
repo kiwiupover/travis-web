@@ -32,9 +32,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function () {
   this.mount('dashboard');
-  // this.route('dashboard', { resetNamespace: true }, function () {
-  //   this.route('repositories', { path: '/' });
-  // });
+  
   this.route('main', { path: '/', resetNamespace: true }, function () {
     this.route('getting_started', { resetNamespace: true });
     this.route('recent');
