@@ -1,4 +1,4 @@
-<h1>DASHBOARD</h1>
+{{#travis-layout layoutName="layouts/simple" class="dashboard"}}
 <div class="inner">
   <div class="dashboard-header">
     {{orgs-filter orgs=orgs selected=selectedOrg action="selectOrg"}}
@@ -17,7 +17,7 @@
     <section class="dashboard-section dashboard-active">
       <h2 class="small-title">All repositories</h2>
       <ul class="repo-list">
-         {{#each filteredRepositories as |repo|}}
+        {{#each filteredRepositories as |repo|}}
           {{dashboard-row repo=repo}}
         {{else}}
           {{no-repos}}
@@ -32,3 +32,4 @@
     </section>
   </div>
 </div>
+{{/travis-layout}}

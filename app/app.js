@@ -16,10 +16,17 @@ var App = Ember.Application.extend(Ember.Evented, {
   podModulePrefix: config.podModulePrefix,
   Resolver: Resolver,
 
-  dependencies: {
-    services: [
-      'auth'
-    ]
+  engines: {
+    dashboard: {
+      dependencies: {
+        services: [
+          'auth',
+          'permissions',
+          'error',
+          'current-user'
+        ],
+      }
+    }
   },
 
   // Configure global logging based on debug feature flag
